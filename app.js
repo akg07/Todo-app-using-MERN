@@ -7,7 +7,11 @@ const app = express();
 app.use('/', require('./routes'));
 
 // set ejs view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
+// assets - static file using middleware
+app.use(express.static('assets'));
 
 
 app.listen(port, (err) => {

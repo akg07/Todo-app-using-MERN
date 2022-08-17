@@ -1,4 +1,4 @@
 module.exports.home = function(req, res) {
 
-    return res.send('<h1>This is home </h1>')
+    return res.render('home');
 }

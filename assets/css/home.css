@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+/* Main container with white background */
+.container {
+    width: 700px;
+    height: 500px;
+    border: 1.5px solid red;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+    /* padding: 5px; */
+    background-color: white;
+}
+
+.app-header {
+    display: inline;
+}
+
+/* center the application name */
+.app-header h2 {
+    text-align: center;
+    color: grey;
+    font-weight: bolder;
+}
+
+/* all different section seperated by horizontal line */
+.desc{
+    width: 100%;
+    height: auto;
+    margin: 0px 5px 10px 5px;
+}
+
+/* description label */
+.desc label {
+    color: grey;
+    font-size: 12px;
+}
+
+/* description input box - for writing text */
+.desc-text input {
+    width: 90%;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+
+/* for writing text */
+.desc-text input::placeholder {
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+/* category date container  */
+.category-date{
+    display: flex;
+}
+
+/* category-container */
+.category-container {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* label */
+.category-container label{
+    color: grey;
+    font-size: 12px;
+}
+
+/* select */
+.category-container select {
+    width: 325px;
+    border: none;
+    height: 25px;
+}
+
+/* click on select effect */
+.category-container select:focus {
+    outline: none;
+}
+
+/* date-container */
+.due-date-container{
+    width: 50%;
+    height: auto;
+    display: inline-block;
+}
+
+/* date label */
+.due-date-container label{
+    color: grey;
+    font-size: 12px;
+}
+
+.due-date-container input {
+    border: none;
+    width: 300px;
+}
+
+/* removed outline of the date box */
+.due-date-container input:focus {
+    outline: none;
+}
+
+/* buttons */
+.buttons{
+    width: 100%;
+    height: auto;
+}
+.buttons .btn-design{
+    margin: 50px 200px;
+}
+
+.btn-design a{
+    padding: 15px;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Commonly used classes */
+
+/* horizontal line */
+hr{
+    color: grey;
+    border-style: inset;
+    border-width: 0.5px;
+    /* margin: 0.5rem auto; */
+}
+
+/* vertical line */
+.vl{
+    display: inline-block;
+    border-left: 1px solid grey;
+    height: auto;
+    margin: 0 0.5rem
+}
+
