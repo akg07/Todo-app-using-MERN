@@ -1,3 +1,10 @@
+:root {
+    --addTask: #444444;
+    --deleteTask: #EE351E;
+    --personal: #87CEFA;
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -12,11 +19,9 @@ body{
 /* Main container with white background */
 .container {
     width: 700px;
-    height: 500px;
-    border: 1.5px solid red;
-    display: flex;
-    flex-direction: column;
+    height: auto;
     margin: auto;
+    border: 1px solid white;
     margin-top: 50px;
     /* padding: 5px; */
     background-color: white;
@@ -61,8 +66,9 @@ body{
 }
 
 /* category date container  */
-.category-date{
+.add-task{
     display: flex;
+    flex-direction: row;
 }
 
 /* category-container */
@@ -123,12 +129,78 @@ body{
     margin: 50px 200px;
 }
 
-.btn-design a{
-    padding: 15px;
+.btn-design .btn{
+    width: 110px;
+    height: 50px;
+    /* outline: none; */
+    border: none;
+    border-radius: 5px;
     color: white;
-    margin-right: 10px;
-    text-decoration: none;
 }
+
+.btn-design #add-task{
+    background-color: var(--addTask);
+}
+
+
+.btn-design #delete-task{
+    background-color: var(--deleteTask);
+}
+
+/* Task List */
+.todo-list-container{
+    width: 95%;
+    margin: auto;
+}
+
+.todo-list-container ul{
+    list-style: none;
+    padding: 0;
+}
+
+.todo-card {
+    display: flex;
+}
+
+.todo-card .todo-checkbox{
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 5%;
+}
+
+.todo-task-date {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-task-date .todo-task {
+    font-size: 20px;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.todo-task-date .task-date {
+    font-size: 12px;
+    margin-left: 14px;
+    margin-top: -20px;
+    font-weight: 600;
+}
+
+.todo-category{
+    margin: auto;
+}
+
+.todo-category .categoryName {
+    padding: 10px;
+    background-color: var(--personal);
+    color: white;
+    font-weight: 600;
+
+}
+
+
 
 /* Commonly used classes */
 

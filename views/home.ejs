@@ -21,57 +21,100 @@
     
     <!-- outter container -->
     <div class="container">
+        <!-- App heading -->
         <div class="app-header">
             <h2>TODO App</h2>
         </div>
         <div><hr></div>
-        
-        <div class="desc">
-            <label for="desc">DESCRIPTION</label>
-            <div class="desc-text"><input type="text" name="desc" placeholder="What do you need to do?"></div>
-        </div>
-        <div><hr></div>
-        
-        <div class="category-date">
-            <div class="category-container">
-                <label for="category">CATEGORY</label>
-                <br>
-                <select name="category" id="category">
-                    <option value="default" style="color: grey;">Choose a category</option>
-                    <option value="personal" selected>Personal</option>
-                    <option value="work">Work</option>
-                    <option value="school">School</option>
-                    <option value="cleaning">Cleaning</option>
-                    <option value="other">Other</option>
-                </select>
+
+        <!-- post the content of the form -->
+        <form action="/add-task" method="POST">
+
+            <!-- description of the task -->
+            <div class="desc">
+                <label for="desc">DESCRIPTION</label>
+                <div class="desc-text"><input type="text" name="desc" placeholder="What do you need to do?"></div>
             </div>
-            <div class="vl"></div>
-            <div class="due-date-container">
-                <label for="due-date">DUE DATE</label>
-                <br>
+            <div><hr></div>
+
+            <div class="add-task">
+
+                <!-- set category of the task if any (optional) -->
+                <div class="category-container">
+                    <label for="category">CATEGORY</label>
+                    <br>
+                    <select name="category" id="category">
+                        <option value="default" style="color: grey;">Choose a category</option>
+                        <option value="personal" selected>Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="vl"></div>
+
+                <!-- set due date for the task -->
+                <div class="due-date-container">
+                    <label for="due-date">DUE DATE</label>
+                    <br>
                 <!-- add calender code here -->
-                <input type="date" name="due-date" placeholder="dd/mm/yyyy">
+                    <input type="date" name="due-date" placeholder="dd/mm/yyyy">
                 <!-- <input type="text" placeholder="dd/mm/yyyy" onfocus="(this.type='date')" onblur="(this.type='text')"> -->
+                </div>
             </div>
-        </div>
+            <div><hr></div>
+
+            <!-- buttons -->
+            <div class="buttons">
+                <div class="btn-design">
+                    <!-- button for add task to todo list -->
+                    <button class="btn" id="add-task">
+                        <i class="fa-solid fa-plus"></i>
+                        ADD TASK
+                    </button>
+                    <!-- <a href="#" style="background-color: #444444;">
+                        <i class="fa-solid fa-plus"></i>
+                        ADD TASK
+                    </a> -->
+
+                    <button class="btn" id="delete-task">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Delete Task
+                    </button>
+                    <!-- button for delete task from todo list -->
+                    <!-- <a href="#" style="background-color: #EE351E;">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Delete Task
+                    </a> -->
+                </div>
+            </div>
+        </form>
         <div><hr></div>
 
-        <div class="buttons">
-            <div class="btn-design">
-                <a href="#" style="background-color: #444444;">
-                    <i class="fa-solid fa-plus"></i>
-                    ADD TASK
-                </a>
-                <a href="#" style="background-color: #EE351E;">
-                    <i class="fa-solid fa-trash-can"></i>
-                    Delete Task
-                </a>
-            </div>
-        </div>
-        <div><hr></div>
-
-        <div class="list-container">
-            All content
+        <div class="todo-list-container">
+            <ul>
+                <li class="todo-card">
+                    <div class="todo-checkbox">
+                        <!-- add checkbox -->
+                        <input type="checkbox" name="isCompleted" id="isCompleted">
+                    </div>
+                    <div class="todo-task-date">
+                        <!-- add todo task -->
+                        <div class="todo-task">
+                            <p>This task need to be completed</p>
+                        </div>
+                        <!-- add due date -->
+                        <div class="task-date">
+                            <p>Sep 07, 2022</p>
+                        </div>
+                    </div>
+                    <div class="todo-category">
+                        <!-- add category -->
+                        <div class="categoryName">PERSONAL</div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
     </div>
