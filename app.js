@@ -1,10 +1,16 @@
+// requried modules
 const express = require('express');
+const db = require('./config/mongoose');
+const Task = require('./models/Task');
+const bodyParser = require('body-parser');
+
 const port = 8000;
 
 const app = express();
 
 // use routers
-app.use('/', require('./routes'));
+app.use('/', require('./routes')); // redirect to routes directory
+app.use(bodyParser.urlencoded({extended : false}));
 
 // set ejs view engine
 app.set('view engine', 'ejs');

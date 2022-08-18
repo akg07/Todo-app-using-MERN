@@ -9,8 +9,12 @@ const homeController = require('../controllers/home_controller');
 // for test: may be removed
 console.log("home router is loaded");
 
-
+// home page - get List of all tasks
 router.get('/', homeController.home)
+
+// add task
+
+// delete task
 
 
 module.exports = router;
