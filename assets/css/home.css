@@ -2,6 +2,11 @@
     --addTask: #444444;
     --deleteTask: #EE351E;
     --personal: #87CEFA;
+    --school: #F2A700;
+    --work: #9C00AF;
+    --cleaning: rgb(158, 236, 158);
+    --other: rgb(83, 81, 81);
+    --default: #fff
 }
 
 
@@ -143,64 +148,92 @@ body{
 }
 
 
-.btn-design #delete-task{
+.btn-design #delete-tasks{
     background-color: var(--deleteTask);
 }
 
-/* Task List */
-.todo-list-container{
-    width: 95%;
-    margin: auto;
-}
-
-.todo-list-container ul{
-    list-style: none;
-    padding: 0;
-}
-
-.todo-card {
-    display: flex;
-}
-
-.todo-card .todo-checkbox{
-    margin-top: 15px;
-    margin-left: 10px;
-    width: 5%;
-}
-
-.todo-task-date {
-    width: 70%;
+/* Customizations to show all the added tasks list in the app */
+#tasks-list-form{
+    box-sizing: border-box;
+    width: 100%;
     height: auto;
+    border: 10px solid white;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.task{
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.todo-task-date .todo-task {
-    font-size: 20px;
-    margin-top: -10px;
-    margin-left: 10px;
+.task > *{
+    margin-right: 20px;
 }
 
-.todo-task-date .task-date {
-    font-size: 12px;
-    margin-left: 14px;
-    margin-top: -20px;
-    font-weight: 600;
+.task-data{
+    display: inline-block;
+    width: 70%;
 }
 
-.todo-category{
-    margin: auto;
+.task-data *{
+    color:rgb(119, 116, 116);
 }
 
-.todo-category .categoryName {
-    padding: 10px;
-    background-color: var(--personal);
+.task-data p{
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.task-data span{
+    font-size: small;
+}
+
+.task button{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100px;
     color: white;
-    font-weight: 600;
-
+    text-transform: uppercase;
 }
 
+button:hover{
+    cursor: pointer;
+}
 
+.default {
+    display: none;
+    background-color: var(--default);
+}
+
+.default:hover{
+    cursor: none;
+}
+
+.personal{
+    background-color: var(--personal);
+}
+
+.work{
+    background-color: var(--work);
+}
+
+.cleaning{
+    background-color: var(--cleaning);
+}
+
+.other{
+    background-color: var(--other);
+}
+
+.school{
+        background-color: var(--school);
+}
 
 /* Commonly used classes */
 

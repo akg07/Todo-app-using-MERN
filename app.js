@@ -9,8 +9,8 @@ const port = 8000;
 const app = express();
 
 // use routers
-app.use('/', require('./routes')); // redirect to routes directory
 app.use(bodyParser.urlencoded({extended : false}));
+app.use('/', require('./routes')); // redirect to routes directory
 
 // set ejs view engine
 app.set('view engine', 'ejs');
